@@ -7,7 +7,7 @@
   One           Angular component
     Two         React component
       Three     Angular component
-        Four    React component
+        Four    React component using React state
 ```
 
 ## Running it

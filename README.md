@@ -1,6 +1,8 @@
 # angular2react-demos
 
-> Example usages for [angular2react](https://github.com/coatue-oss/angular2react) and [react2angular](https://github.com/coatue-oss/react2angular)
+> Example usages for [angular2react](https://github.com/coatue-oss/angular2react)
+
+![Example](example.gif)
 
 ## Examples
 

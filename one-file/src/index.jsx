@@ -16,11 +16,29 @@ import { render } from 'react-dom'
 import { react2angular } from 'react2angular'
 
 // Four
+class Four extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = { number: props.four }
+    this.handleClick = this.handleClick.bind(this)
+  }
 
-let Four = ({ four }) =>
-  <div>
-    four: {four}
-  </div>
+  handleClick () {
+    this.setState(prevState => ({
+      number: prevState.number + 1
+    }))
+  }
+
+  render () {
+    return (
+      <div>
+        <p>number: {this.state.number}</p>
+        <button onClick={this.handleClick}> Plus </button>
+      </div>
+    )
+  }
+}
+
 let FourAngular = react2angular(Four, ['four'])
 
 // Three
