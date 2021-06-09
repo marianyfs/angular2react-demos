@@ -7,6 +7,10 @@
 - [One file with multiple nested components (React root component)](one-file)
 - [Multi file with multiple nested components (React root component)](multi-file)
 
+## Requirements
+
+- Node 10.6.0 or minor version
+
 ## License
 
 MIT
