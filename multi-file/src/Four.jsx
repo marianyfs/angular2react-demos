@@ -1,27 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 import { react2angular } from 'react2angular'
 
-export class Four extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = { number: props.four }
-    this.handleClick = this.handleClick.bind(this)
-  }
+const Button = styled.button`
+  font-family: 'Verdana';
 
-  handleClick () {
-    this.setState(prevState => ({
-      number: prevState.number + 1
-    }))
-  }
+  background-color: red;
 
-  render () {
-    return (
+  border-radius: 4px;
+  box-shadow: 4px;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0px;
+
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const Four = ({ four }) => {
+  const [number, setNumber] = useState(four)
+  return (
+    <React.Fragment>
       <div>
-        <p>number: {this.state.number}</p>
-        <button onClick={this.handleClick}> Plus </button>
+        number: {number}
       </div>
-    )
-  }
+
+      <Button onClick={() => setNumber(number + 1)}> Plus </Button>
+    </ React.Fragment>
+  )
 }
 
-export let FourAngular = react2angular(Four, ['four'])
+export const FourAngular = react2angular(Four, ['four'])
